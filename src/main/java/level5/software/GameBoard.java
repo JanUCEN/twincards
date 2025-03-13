@@ -15,8 +15,8 @@ public class GameBoard {
     private void generateCards(double numberOfPairs) {
         List<String> temp = new ArrayList<>();
         for (int i = 0; i < numberOfPairs; i++) {
-            temp.add("Card " + i);
-            temp.add("Card " + i); //put two of each card in. 
+            temp.add("C " + (i+1));
+            temp.add("C " + (i+1)); //put two of each card in. 
         }
 
         Collections.shuffle(temp);
