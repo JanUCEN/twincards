@@ -24,15 +24,15 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        double pairs = 24;
+        double pairs = 6;
 
         GridPane grid = new GridPane();
         grid.setHgap(2);
         grid.setVgap(2);
         int rows = (int) Math.sqrt(pairs);
         int cols = (int) Math.ceil(pairs / rows);
-        int cardWidth = 80;
-        int cardHeight = 100;
+        int cardWidth = 50;
+        int cardHeight = 50;
         board = new GameBoard(pairs);
         List<Button> cards = new ArrayList<>();
 
@@ -56,6 +56,7 @@ public class App extends Application {
 
     private void checkCard(Card card, Button btn) {
         System.out.println(card.getValue());
+        btn.setText(card.getValue());
     }
 
     static void setRoot(String fxml) throws IOException {
